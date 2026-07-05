@@ -11,5 +11,5 @@ else:
 
     like = input("Do you like action movies? (yes/no): ").strip().lower()
 
-    if like == "ys":
+    if like == "yes":
         print("You might enjoy the latest action blockbuster!")
