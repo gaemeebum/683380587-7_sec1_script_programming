@@ -31,4 +31,28 @@ False or True → True)
 output
 Stay indoors or bring an umbrella.
 
+------------------------------------
+
 #Block B : Vectorized Filter
+phrase = "Python 2026 Engine"
+
+consonants = {
+    c.lower()
+    for c in phrase
+    if c.isalpha() and c.lower() not in 'aeiou'
+}
+
+print(f"Unique consonants: {consonants}")
+
+ลำดับการทำงาน
+1. กำหนดข้อความ "Python 2026 Engine"
+2. วนอ่านตัวอักษรทีละตัว
+3. เลือกเฉพาะตัวอักษร (isalpha())
+4. ตัดสระ (a e i o u) ออก
+5. แปลงเป็นตัวพิมพ์เล็ก (lower())
+6. เก็บใน set จึงไม่มีตัวซ้ำ
+
+ตัวที่เหลือคือ p y t h n g
+
+output
+Unique consonants: {'p', 'y', 't', 'h', 'n', 'g'}
