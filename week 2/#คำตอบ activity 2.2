@@ -1,0 +1,40 @@
+activity 2.2 : Choose Your Own Adventure
+Story: You are lost in a forest.
+
+Step 1
+Ask the player: You are lost in a forest.
+Choose a direction:
+1. Left
+2. Right
+
+If the player chooses 1 (Left)
+They find a river.
+
+Ask: What do you do?
+1. Swim across
+2. Build a bridge
+If choose 1
+Output: You are swept away by the river. Game Over.
+Else if choose 2
+Output: You safely cross the river. You Win!
+
+Else if the player chooses 2 (Right)
+They meet a wild bear.
+
+Ask: What do you do?
+1. Run
+2. Climb a tree
+If choose 1
+Output: The bear catches you. Game Over.
+Else if choose 2
+Output: The bear leaves. You survive!
+Else
+Output: Invalid choice.
+
+ลำดับการทำงาน
+1. ใช้ input() รับทางที่ผู้เล่นเลือก
+2. ใช้ if-elif-else ตรวจสอบว่าเลือกซ้ายหรือขวา
+3. ถ้าเลือกซ้าย ให้รับ input() อีกครั้งเพื่อเลือกข้ามแม่น้ำ
+4. ถ้าเลือกขวา ให้รับ input() อีกครั้งเพื่อเลือกหนีหมี
+5. แสดงผลลัพธ์ตามทางที่เลือก
+6. ถ้าผู้เล่นกรอกตัวเลือกไม่ถูกต้อง ให้แสดง "Invalid choice."
