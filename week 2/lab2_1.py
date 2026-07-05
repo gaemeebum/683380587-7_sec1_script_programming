@@ -10,6 +10,6 @@ else:
 if num == 0:
     print(f"{text}.")
 elif num % 2 == 0:
-    print(f"{text} and even numbr.")
+    print(f"{text} and even number.")
 else:
     print(f"{text} and odd number.")
