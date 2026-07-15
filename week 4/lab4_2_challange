@@ -1,0 +1,17 @@
+# โจทย์ท้าทาย (Challenge): ลองเขียนโค้ดให้รับโดยใช้คำสั่ง input แทนที่จะกำหนดค่าในโปรแกรม 
+# แล้วนำมาคำนวณหาระยะห่าง อย่าลืมแปลงชนิดข้อมูล (Type Conversion) ที่ได้มาจากคำสั่ง input() ให้เรียบร้อยก่อนนำไปคำนวณ (เช่น แปลงเป็น integer หรือ float)
+
+import math 
+
+x1 = float(input("Enter x-coordinate of Point 1: "))
+y1 = float(input("Enter y-coordinate of Point 1: "))
+point1 = (x1, y1)
+
+x2 = float(input("Enter x-coordinate of Point 2: "))
+y2 = float(input("Enter y-coordinate of Point 2: "))
+point2 = (x2, y2)
+
+distance = math.sqrt((point2[0] - point1[0]) ** 2 +
+                     (point2[1] - point1[1]) ** 2)
+
+print(f"Distance between point1 {point1} and point2 {point2}: {distance}")

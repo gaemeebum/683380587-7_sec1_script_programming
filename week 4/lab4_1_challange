@@ -1,0 +1,59 @@
+# โจทย์ท้าทาย (Challenge): ลองสร้างระบบเมนูสั่งการแบบง่ายๆ โดยใช้การวนลูป while (จากบทเรียนสัปดาห์ที่ 3) เพื่อให้ผู้ใช้สามารถกดเลือกได้ว่าจะ เพิ่ม, ลบ, ค้นหา, เรียงลำดับ หรือกดออกจากโปรแกรม
+# เช่น
+# 1.เพิ่ม
+# 2.ลบ
+# 3.ค้นหา
+# 4.เรียงลำดับ
+# 5.ออกจากโปรแกรม
+
+print("--- Student Management System ---")
+
+student_names = []
+
+while True:
+    print("\n===== MENU =====")
+    print("1. Add Student")
+    print("2. Remove Student")
+    print("3. Find Student")
+    print("4. Sort Students")
+    print("5. Exit")
+
+    choice = input("Choose menu (1-5): ")
+
+    if choice == "1":
+        name = input("Enter student name: ")
+        student_names.append(name)
+        print("Student added.")
+        print(student_names)
+
+    elif choice == "2":
+        name = input("Enter student name to remove: ")
+
+        if name in student_names:
+            student_names.remove(name)
+            print(f"{name} has been removed.")
+        else:
+            print("Student not found.")
+
+        print(student_names)
+
+    elif choice == "3":
+        name = input("Enter student name to search: ")
+
+        if name in student_names:
+            position = student_names.index(name)
+            print(f"Found '{name}' at index {position}")
+        else:
+            print("Student not found.")
+
+    elif choice == "4":
+        student_names.sort()
+        print("Sorted list:")
+        print(student_names)
+
+    elif choice == "5":
+        print("Exit program.")
+        break
+
+    else:
+        print("Invalid menu. Please choose 1-5.")
