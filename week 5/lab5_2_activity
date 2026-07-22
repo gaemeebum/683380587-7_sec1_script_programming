@@ -1,0 +1,45 @@
+# Activity 5.2: โปรแกรมนับความถี่ของคำ (Word Frequency Counter) โดยใช้ Dictionary
+
+# Word Frequency Counter 
+
+sentence = input("Please enter a sentence: ")
+sentence = sentence.lower()
+words = sentence.split()
+
+word_counts = {}
+
+for word in words:
+    clean_word = word.strip('.,!?"\'')
+    
+    if clean_word == "":
+        continue
+
+    if clean_word in word_counts:
+        word_counts[clean_word] += 1
+    else:
+        word_counts[clean_word] = 1
+
+print("\n--- Word Frequency Results ---")
+for word, count in word_counts.items():
+    print(f"'{word}' : {count} times")
+
+sentence = input("Please enter a sentence: ")
+sentence = sentence.lower()
+words = sentence.split()
+
+word_counts = {}
+
+for word in words:
+    clean_word = word.strip('.,!?"\'')
+
+    if clean_word == "":
+        continue
+
+    if clean_word in word_counts:
+        word_counts[clean_word] += 1
+    else:
+        word_counts[clean_word] = 1
+
+print("\n--- Word Frequency Results ---")
+for word, count in word_counts.items():
+    print(f"'{word}' : {count} times")

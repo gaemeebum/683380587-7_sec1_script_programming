@@ -29,6 +29,7 @@ while True:
     # --- เมนูที่ 1: เพิ่มหรืออัปเดตข้อมูลผู้ติดต่อ ---
     if choice == '1':
         name = input("Enter contact name: ")
+        name = name.lower() 
         phone = input("Enter phone number: ")
         email = input("Enter email: ")
 
@@ -43,6 +44,7 @@ while True:
     # --- เมนูที่ 2: ดูรายละเอียดผู้ติดต่อ ---
     elif choice == '2':
         name = input("Enter contact name to view: ")
+        name = name.lower()
 
         # todo (3): ใช้เมธอด .get() เพื่อดึงข้อมูลของผู้ติดต่อตามชื่อ name
         info = contacts.get(name)
@@ -67,6 +69,7 @@ while True:
     # --- เมนูที่ 4: ลบข้อมูลผู้ติดต่อ ---
     elif choice == '4':
         name = input("Enter contact name to delete: ")
+        name = name.lower()
 
         # todo (5): ใช้เมธอด .pop() ลบ key ตามชื่อ name
         # และใส่ค่า default เป็น None หากไม่พบชื่อเพื่อป้องกันการเกิด Error
