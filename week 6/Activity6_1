@@ -1,0 +1,27 @@
+def is_positive_negative_zero(num):
+    """Return whether the number is positive, negative, or zero."""
+    if num < 0:
+        return "negative"
+    elif num > 0:
+        return "positive"
+    else:
+        return "zero"
+
+def is_even_odd(num):
+    """Return whether the number is even or odd."""
+    if num == 0:
+        return "zero"
+    elif num % 2 == 0:
+        return "even"
+    else:
+        return "odd"
+
+num = int(input("Enter a number: "))
+
+sign = is_positive_negative_zero(num)
+number_type = is_even_odd(num)
+
+if num == 0:
+    print(f"{num} is {sign}.")
+else:
+    print(f"{num} is {sign} and {number_type} number.")
